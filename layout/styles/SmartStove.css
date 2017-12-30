@@ -15,6 +15,10 @@
 
 @media only screen and (orientation:landscape) {
 
+    #wrapper {
+        display: block;
+    }
+
     #warning-message {
         display: none;
     }
