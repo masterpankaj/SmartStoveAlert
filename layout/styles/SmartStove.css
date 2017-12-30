@@ -104,6 +104,7 @@ nav {
     font-weight: 800;
     color: #383638;
     text-transform: none;
+    transition: .25s ease-out all;
 }
 
     .appname:hover {
@@ -132,10 +133,12 @@ nav {
     height: 28px;
     cursor: pointer;
     top: 10px;
+    transition: .25s ease-out all;
 }
 
     .cart:hover {
         background: linear-gradient(to bottom,#873015 0,#66210c 100%);
+        transition: .25s ease-out all;
     }
 
     .cart:active {
