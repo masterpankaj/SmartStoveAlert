@@ -20,7 +20,13 @@
 
 </head>
 <body>
-    <div>
+    <div id="warning-message">
+
+        this website is only viewable in landscape mode
+
+    </div>
+
+    <div id="wrapper">
         <!--###########################HEADER##################################-->
         <header id="home">
             <div class="menu">
@@ -93,18 +99,18 @@
                              data-image="images/SS4.jpg"
                              data-description="This is a Lemon Slice"
                              style="display:none">
-                        </a>
+                    </a>
 
-                        <a class="aboutRightLinks">
-                            <img alt="Smart Stove Alert - Prototype 4"
-                                 src="images/SS2.jpg"
-                                 data-image="images/SS2.jpg"
-                                 data-description="This is a Lemon Slice"
-                                 style="display:none">
-                        </a>
+                    <a class="aboutRightLinks">
+                        <img alt="Smart Stove Alert - Prototype 4"
+                             src="images/SS2.jpg"
+                             data-image="images/SS2.jpg"
+                             data-description="This is a Lemon Slice"
+                             style="display:none">
+                    </a>
 
 
-                    
+
                 </div>
             </div>
             <div class="aboutRight">
@@ -323,7 +329,7 @@
 
             // When the user clicks the button, open the modal
             btn.onclick = function () {
-                
+
                 //modal.style.display = "block";
                 $("#myModal").delay(200).fadeIn();
             }

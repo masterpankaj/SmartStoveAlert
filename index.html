@@ -19,7 +19,12 @@
 
 </head>
 <body>
-    <div>
+    <div id="warning-message">
+
+        this website is only viewable in landscape mode
+
+    </div>
+    <div id="wrapper">
 
         <!--###########################HEADER##################################-->
         <header id="home">
@@ -90,7 +95,7 @@
 
                         </div>
                         <div class="contentRight">
-                            <img src="images/SS1.jpg"/>
+                            <img src="images/SS1.jpg" />
                         </div>
                     </div>
 
@@ -221,7 +226,7 @@
                         </div>
                         <div class="checkOutRight">
                             <h3 style="color:#000; text-align:center; font-size:16px; font-weight:bold;">Order Summary</h3>
-                            <img src="images/proto1.jpg" width="75" height="70" style="margin-left:30px; margin-bottom:5px;"/>
+                            <img src="images/proto1.jpg" width="75" height="70" style="margin-left:30px; margin-bottom:5px;" />
                             <div class="divRightCart">
                                 <span style="color:#000; font-weight:bold;font-size:12px;">Smart Stove Alert</span>
                                 <br />
@@ -348,7 +353,7 @@
         $(document).ready(function () {
             $('#checkout').click(function () {
                 var hidden = $('.hidden');
-                                
+
                 if (hidden.hasClass('visible')) {
                     hidden.animate({ "left": "-1000px" }, 1).removeClass('visible');
                 } else {
@@ -367,7 +372,7 @@
 
                 if (hidden.hasClass('visible')) {
                     hidden.animate({ "left": "-1000px" }, 1).removeClass('visible');
-                } 
+                }
             });
 
             Email.send("pankaj_2424@yahoo.co.in",
@@ -413,7 +418,7 @@
         btn.onclick = function () {
 
             //modal.style.display = "block";
-            $("#myModal").delay(200).fadeIn();   
+            $("#myModal").delay(200).fadeIn();
 
             Email.send("pankaj_2424@yahoo.co.in",
                 "pankaj_2424@yahoo.co.in",
