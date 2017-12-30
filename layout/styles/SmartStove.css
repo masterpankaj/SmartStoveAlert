@@ -73,6 +73,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
+    overflow: auto;
 }
 
 .nav-menu {
@@ -403,6 +404,7 @@ label {
 
 .aboutRight {
     position: absolute;
+    overflow: auto;
     float: right;
     padding-top: 40px !important;
     padding-right: 15px !important;
