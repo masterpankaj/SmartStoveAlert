@@ -7,20 +7,20 @@
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="Pankaj Sharma">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!--<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">-->
+    <!--CSS-->
     <link href="layout/styles/SmartStove.css" rel="stylesheet" type="text/css" media="all">
-
-    <link rel="stylesheet" href="layout/styles/swiper.min.css">
+    <link rel='stylesheet' href='layout/styles/unite-gallery.css' type='text/css' />
     <!-- JAVASCRIPTS -->
     <script src="layout/scripts/jquery.min.js"></script>
-    <script src="layout/scripts/swiper.min.js"></script>
-    <script src="layout/scripts/smtp.js"></script>
+    <script type='text/javascript' src='layout/scripts/unitegallery.min.js'></script>
+    <script type='text/javascript' src='layout/scripts/ug-theme-tiles.js'></script>
+
+    
 
 
 </head>
 <body>
     <div>
-
         <!--###########################HEADER##################################-->
         <header id="home">
             <div class="menu">
@@ -66,127 +66,61 @@
             </div>
         </header>
 
+        <!--########################### CONTENT ##################################-->
         <div class="content">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="images/bg4.jpg" style="width: 100%; height: 500px; opacity: 0.73; position:absolute;" />
-                        <div class="contentLeft">
-                            <p style="padding-top: 10px;">
-                                An average kitchen is filled with numerous hazards that may go unnoticed until an accident happens,
-                                Kitchen Fire is one of the common reasons for most of the hazzards
-                            </p>
-                            <p>Why take the risk when you can do something about it?</p>
-                            <br />
-                            <p>
-                                <span style="font-size: 21px;">
-                                    Introducing
-                                    <span style="color: #f4511e;">SMART STOVE AGENT</span>
-                                    <span style="font-size: 9px;">[Saftey begins at home]</span>
-                                    <br />
-                                    The smartest way to manage kitchen saftey
-                                </span>
-                            </p>
+            <img src="images/bg4.jpg" style="width: 100%; height: 500px; opacity: 0.73; position:absolute;" />
 
-                        </div>
-                        <div class="contentRight">
-                            <img src="images/proto1.jpg" />
-                        </div>
-                    </div>
+            <div class="aboutLeft">
+                <div id="gallery" style="display:none;">
 
-                    <div class="swiper-slide">
-                        <img src="images/bg4.jpg" style="width: 100%; height: 500px; opacity: 0.73; position:absolute;" />
-                        <div class="contentLeft">
-                            <p>
-                                <h2><span style="color: #f4511e;">FACTS</span></h2>
+                    <a class="aboutRightLinks">
+                        <img alt="Smart Stove Alert - Prototype 1"
+                             src="images/proto1.jpg"
+                             data-image="images/proto1.jpg"
+                             data-description="This is a Lemon Slice"
+                             style="display:none;">
+                    </a>
+                    <a class="aboutRightLinks">
+                        <img alt="Smart Stove Alert - Prototype 2"
+                             src="images/proto3.jpg"
+                             data-image="images/proto3.jpg"
+                             data-description="This is a Lemon Slice"
+                             style="display:none">
+                    </a>
+                    <a class="aboutRightLinks">
+                        <img alt="Smart Stove Alert - Prototype 3"
+                             src="images/proto4.jpg"
+                             data-image="images/proto4.jpg"
+                             data-description="This is a Lemon Slice"
+                             style="display:none">
+                        </a>
 
-                                Do You Know
-                            </p>
-                            <ul>
-                                <li>Cooking in the kitchen is the most serious cause of home fires</li>
-                                <li>Unattended cooking was a factor of 34% of reported cooking fires<sup>[1]</sup></li>
-                            </ul>
-
-                            <p><u>Source</u></p>
-                            <p style="font-size: 15px;"><sup>[1]</sup> : <a href="https://safety.smart911.com/cause-1-cause-house-fires/" class="applinks" target="_blank">Smart911</a></p>
-                        </div>
-                        <div class="contentRight">
-                            <img src="images/kitchen1.jpg" />
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <img src="images/bg4.jpg" style="width: 100%; height: 500px; opacity: 0.73; position:absolute;" />
-                        <div class="contentLeft">
-                            <p>
-                                <h2><span style="color: #f4511e;">FACTS</span></h2>
-
-                                Also Do You Know
-                            </p>
-                            <ul>
-                                <li>In 9% of the cooking fire material was too close to the cooking equipment</li>
-                                <li>Not cleaning your stove top can result in grease buildup, which is flammable</li>
-                                <li>In 66% of home structure fires it’s started with igniting of the cooking materials including food</li>
-                            </ul>
-                        </div>
-                        <div class="contentRight">
-                            <img src="images/cooking-fire.jpg" />
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <img src="images/bg4.jpg" style="width: 100%; height: 500px; opacity: 0.73; position:absolute;" />
-                        <div class="contentLeft">
-                            <p>
-                                <h2><span style="color: #f4511e;">FACTS</span></h2>
-                                Also Do You Know
-                            </p>
-                            <ul>
-                                <li>35% of people did have experienced with stove fire <sup>[3]</sup></li>
-                                <li>125,000 fire damage per year are caused by stove fires in Germany<sup>[3]</sup></li>
-                                <li>In 66% of home structure fires it’s started with igniting of the cooking materials including food</li>
-                            </ul>
-
-                            <p><u>Source</u></p>
-                            <p style="font-size: 15px; padding-top: 0px;"><sup>[2]</sup> : Survey Oct,2017; Michighan</p>
-                            <p style="font-size: 15px;"><sup>[3]</sup> : IFS, Institut für Schadenverhütung und Schadenforschung, Germany</p>
-                        </div>
-                        <div class="contentRight">
-                            <img src="images/home.jpg" />
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <img src="images/bg4.jpg" style="width: 100%; height: 500px; opacity: 0.73; position:absolute;" />
-                        <div class="contentLeft">
-                            <p>
-                                <h2><span style="color: #f4511e;">FACTS</span></h2>
-                                Also Do You Know
-                            </p>
-                            <ul>
-
-                                <li>Kitchen fire causes 510 civilian deaths in the USA<sub>[4]</sub></li>
-                                <li>Property damage of around $12.2 bilion is caused by kitchen fire every year<sub>[4]</sub></li>
-                            </ul>
-
-                            <p><u>Source</u></p>
-
-                            <p style="font-size: 15px;"><sup>[2]</sup> :<a href="www.nfpa.org/research" target="_blank" class="applinks">NFPA Research</a></p>
-                        </div>
-                        <div class="contentRight">
-                            <img src="images/kitchen2.jpg" />
-                        </div>
-                    </div>
+                        <a class="aboutRightLinks">
+                            <img alt="Smart Stove Alert - Prototype 4"
+                                 src="images/proto2.jpg"
+                                 data-image="images/proto2.jpg"
+                                 data-description="This is a Lemon Slice"
+                                 style="display:none">
+                        </a>
 
 
+                    
                 </div>
-
-                <div class="swiper-pagination"></div>
-
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
             </div>
+            <div class="aboutRight">
+                <p>
+                    The SmartStoveAlert is smart. It detects dangerous situatons of the stove before the stove firere happen. It has following features:
+                    <ul>
+                        <li><span style="color: #f4511e;">Smart Monitor</span> It monitors the entire stove surface for dangerous situations through a High Sensitivity / Low-Light camera which is powered by the 216 MHz ARM Cortex M7 processor</li>
+                        <li><span style="color: #f4511e;">Smart Power Shut Down</span> : It controls electrical or gas stoves. In unsafe conditions it does shut down the electrical power or gas supply in milliseconds to keep your family safe</li>
+                        <li><span style="color: #f4511e;"> Inter-Connectivity</span>: Its connected to the internet through its Atheros AR9331 Linux Processor with a clock speed of 400MHz. It can call your smart phone or emergency services</li>
+                        <li><span style="color: #f4511e;">Smart Learner</span> It learns continuously and communicates with you through your smart phone. For example you can teach the SmartStoveAlert you is allowed to operate the stove through face recognition</li>
+                    </ul>
+                </p>
+            </div>
+
         </div>
+
 
         <!-- The Modal -->
         <div id="myModal" class="modal">
@@ -221,7 +155,7 @@
                         </div>
                         <div class="checkOutRight">
                             <h3 style="color:#000; text-align:center; font-size:16px; font-weight:bold;">Order Summary</h3>
-                            <img src="images/proto1.jpg" width="75" height="70" style="margin-left:30px; margin-bottom:5px;"/>
+                            <img src="images/proto1.jpg" width="75" height="70" style="margin-left:30px; margin-bottom:5px;" />
                             <div class="divRightCart">
                                 <span style="color:#000; font-weight:bold;font-size:12px;">Smart Stove Alert</span>
                                 <br />
@@ -261,6 +195,7 @@
 
         </div>
 
+        <!--########################### FOOTER ##################################-->
         <footer class="bg-gray-darker" id="footer">
             <div class="footerdiv">
                 <div class="contactInfo">
@@ -326,7 +261,7 @@
                     <form class="rd-mailform rd-mailform-inline text-left" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php" novalidate="novalidate">
                         <div class="form-wrap form-wrap-validation">
                             <br />
-                            <input class="form-input form-input-sm form-control-has-validation form-control-last-child" id="forms-newsletter-email" type="email" name="email" data-constraints="@Email @Required" placeholder="  Enter your e-mail"><span class="form-validation"></span>
+                            <input placeholder="  Enter your e-mail" class="form-input form-input-sm form-control-has-validation form-control-last-child" id="forms-newsletter-email" type="email" name="email" data-constraints="@Email @Required"><span class="form-validation"></span>
                         </div>
                         <button class="button button-xs button-primary-accent" type="submit">Subscribe</button>
                     </form>
@@ -340,99 +275,72 @@
                 </p>
             </div>
         </footer>
-    </div>
 
+        <script type="text/javascript">
 
-    <script>
+            $(document).ready(function () {
+                $('#checkout').click(function () {
+                    var hidden = $('.hidden');
 
-        $(document).ready(function () {
-            $('#checkout').click(function () {
-                var hidden = $('.hidden');
-                                
-                if (hidden.hasClass('visible')) {
-                    hidden.animate({ "left": "-1000px" }, 1).removeClass('visible');
-                } else {
-                    hidden.animate({ "left": "200px" }, "slow").addClass('visible');
-                    $('#checkoutcontent').hide();
-                    $('.modal-content').height(200);
-                }
+                    if (hidden.hasClass('visible')) {
+                        hidden.animate({ "left": "-1000px" }, 1).removeClass('visible');
+                    } else {
+                        hidden.animate({ "left": "200px" }, "slow").addClass('visible');
+                        $('#checkoutcontent').hide();
+                        $('.modal-content').height(200);
+                    }
+                });
+
+                $('#buynow').click(function () {
+                    $('#checkoutcontent').show();
+                    var hidden = $('.hidden');
+
+                    $('.modal-content').removeAttr("style");
+
+                    if (hidden.hasClass('visible')) {
+                        hidden.animate({ "left": "-1000px" }, 1).removeClass('visible');
+                    }
+                });
+            });
+            /****************************************************************************************************/
+
+            jQuery(document).ready(function () {
+
+                jQuery("#gallery").unitegallery();
+
             });
 
-            $('#buynow').click(function () {
+            /****************************************************************************************************/
 
-                $('#checkoutcontent').show();
-                var hidden = $('.hidden');
+            // Get the modal
+            var modal = document.getElementById('myModal');
 
-                $('.modal-content').removeAttr("style");
+            // Get the button that opens the modal
+            var btn = document.getElementById("buynow");
 
-                if (hidden.hasClass('visible')) {
-                    hidden.animate({ "left": "-1000px" }, 1).removeClass('visible');
-                } 
-            });
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
 
-            Email.send("pankaj_2424@yahoo.co.in",
-                "pankaj_2424@yahoo.co.in",
-                "This is a subject",
-                "this is the body",
-                { token: "8c808dd1-4368-4480-bad9-107f5126277a" });
-        });
+            // When the user clicks the button, open the modal
+            btn.onclick = function () {
+                
+                //modal.style.display = "block";
+                $("#myModal").delay(200).fadeIn();
+            }
 
-        var swiper = new Swiper('.swiper-container', {
-            spaceBetween: 30,
-            centeredSlides: true,
-            effect: 'fade',
-            grabCursor: true,
-            touchRatio: 5,
-            speed: 1500,
-            loop: true,
-            autoplay: {
-                delay: 7000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-
-        // Get the modal
-        var modal = document.getElementById('myModal');
-
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("buynow");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks the button, open the modal
-        btn.onclick = function () {
-
-            //modal.style.display = "block";
-            $("#myModal").delay(200).fadeIn();   
-
-            Email.send("pankaj_2424@yahoo.co.in",
-                "pankaj_2424@yahoo.co.in",
-                "This is a subject",
-                "this is the body",
-                { token: "8c808dd1-4368-4480-bad9-107f5126277a" });
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
                 modal.style.display = "none";
             }
-        }
-    </script>
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+        </script>
+    </div>
 </body>
 </html>
