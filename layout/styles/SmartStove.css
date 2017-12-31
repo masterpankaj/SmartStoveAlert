@@ -583,3 +583,43 @@ label {
     padding-bottom:20px;
     margin-bottom:50px;
 }
+
+.featureDiv {
+    overflow: auto;
+    clear: both;
+    width: 100%;
+    background-color: #FFF;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    align-content: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.feature {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+    text-align: center;
+    overflow: auto;
+    float: left;
+    margin-left: 6px;
+    background-color: #f3f9fb;
+    border: 1px solid #f3f9fb;
+}
+
+.featureinner {
+    padding: 30px 20px;
+    background-color: #f3f9fb;
+    min-height: 45px;
+}
+.featureImageDiv {
+    border-bottom: 6px solid #6f51c7;
+    border-radius: 6px 6px 6px 6px;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 10px;
+}
