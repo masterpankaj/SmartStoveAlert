@@ -427,6 +427,17 @@
                 .then(function () {
                     //alert("Sent!");
                     myform.find("button").text("Next : Proceed Billing Information");
+                    /***************************************************************************/
+                    var hidden = $('.hidden');
+
+                    if (hidden.hasClass('visible')) {
+                        hidden.animate({ "left": "-1000px" }, 1).removeClass('visible');
+                    } else {
+                        hidden.animate({ "left": "200px" }, "slow").addClass('visible');
+                        $('#checkoutcontent').hide();
+                        $('.modal-content').height(200);
+                    }
+                    /***************************************************************************/
                 }, function (err) {
                     alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
                     myform.find("button").text("Next : Proceed Billing Information");
@@ -439,13 +450,13 @@
             $('#checkout').click(function () {
                 var hidden = $('.hidden');
 
-                if (hidden.hasClass('visible')) {
-                    hidden.animate({ "left": "-1000px" }, 1).removeClass('visible');
-                } else {
-                    hidden.animate({ "left": "200px" }, "slow").addClass('visible');
-                    $('#checkoutcontent').hide();
-                    $('.modal-content').height(200);
-                }
+                //if (hidden.hasClass('visible')) {
+                //    hidden.animate({ "left": "-1000px" }, 1).removeClass('visible');
+                //} else {
+                //    hidden.animate({ "left": "200px" }, "slow").addClass('visible');
+                //    $('#checkoutcontent').hide();
+                //    $('.modal-content').height(200);
+                //}
             });
 
             $('#buynow').click(function () {
