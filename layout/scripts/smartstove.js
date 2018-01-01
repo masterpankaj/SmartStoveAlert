@@ -14,7 +14,6 @@ myform.submit(function (event) {
 
     // Change to your service ID, or keep using the default service
     var service_id = "default_service";
-
     var template_id = "smartstove";
    
     myform.find("button").text("Processing...");
@@ -36,6 +35,33 @@ myform.submit(function (event) {
         }, function (err) {
             alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
             myform.find("button").text("Next : Proceed Billing Information");
+        });
+    return false;
+});
+
+var subscribeForm = $("form#subscribe");
+
+subscribeForm.submit(function (event) {
+    event.preventDefault();
+
+    var params = subscribeForm.serializeArray().reduce(function (obj, item) {
+        obj[item.name] = item.value;
+        return obj;
+    }, {});
+
+    // Change to your service ID, or keep using the default service
+    var service_id = "default_service";
+    var template_id = "subscribe";
+
+    subscribeForm.find("button").text("Processing...");
+    emailjs.send(service_id, template_id, params)
+        .then(function () {
+            //alert("Sent!");
+            subscribeForm.find("button").text("Subscribe");
+
+        }, function (err) {
+            alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+            subscribeForm.find("button").text("Next : Proceed Billing Information");
         });
     return false;
 });

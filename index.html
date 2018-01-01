@@ -207,17 +207,19 @@
                             <br />
                             <form id="checkOutForm">
                                 <label class="cartLabel">First Name</label>
-                                <input id="fname" class="cartText" type="text" placeholder="Enter First Name" name="fname" 
-                                 pattern="/^[a-zA-Z ]{2,30}$/" required />
+                                <input id="fname" class="cartText" type="text" placeholder="Enter First Name" name="fname"
+                                       pattern="/\b([A-Z]{1}[a-z]{1,30}[- ]{0,1}|[A-Z]{1}[- \']{1}[A-Z]{0,1}  
+    [a-z]{1,30}[- ]{0,1}|[a-z]{1,2}[ -\']{1}[A-Z]{1}[a-z]{1,30}){2,5}/" required />
                                 <label class="cartLabel">Last Name</label>
-                                <input id="lname" class="cartText" type="text" placeholder="Enter Last Name" name="lname" 
-                                 pattern="/^[a-zA-Z ]{2,30}$/" required />
+                                <input id="lname" class="cartText" type="text" placeholder="Enter Last Name" name="lname"
+                                       pattern="/\b([A-Z]{1}[a-z]{1,30}[- ]{0,1}|[A-Z]{1}[- \']{1}[A-Z]{0,1}  
+    [a-z]{1,30}[- ]{0,1}|[a-z]{1,2}[ -\']{1}[A-Z]{1}[a-z]{1,30}){2,5}/" required />
                                 <br />
                                 <br />
                                 <label class="cartLabel">Email</label>
-                                <input id="email" class="cartEmail" type="email" placeholder="Enter Email Address" name="reply_to" 
-                                 pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
-                                 required />
+                                <input id="email" class="cartEmail" type="email" placeholder="Enter Email Address" name="reply_to"
+                                       pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                                       required />
                                 <br />
                                 <br /><br />
                                 <br /><br />
@@ -382,12 +384,17 @@
                         <p>Keep up with our latest news, updates, special offers, and discounts. Enter your e-mail and subscribe to our newsletter in a couple of clicks.</p>
                     </div>
 
-                    <form class="rd-mailform rd-mailform-inline text-left" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php" novalidate="novalidate">
-                        <div class="form-wrap form-wrap-validation">
+                    <form id="subscribe">
+                        <div>
                             <br />
-                            <input class="form-input form-input-sm form-control-has-validation form-control-last-child" id="forms-newsletter-email" type="email" name="email" data-constraints="@Email @Required" placeholder="  Enter your e-mail"><span class="form-validation"></span>
+                            <input class="form-input form-input-sm form-control-has-validation"
+                                   id="forms-newsletter-email" type="email"
+                                   placeholder="   Enter Email Address" name="reply_to"
+                                   pattern="[a-zA-Z0-9!#$%&amp;'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*"
+                                   required />
+
                         </div>
-                        <button class="button button-xs button-primary-accent" type="submit">Subscribe</button>
+                        <button class="button button-primary-accent" type="submit">Subscribe</button>
                     </form>
                 </div>
             </div>
