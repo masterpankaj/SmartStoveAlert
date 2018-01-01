@@ -15,9 +15,7 @@
     <script type='text/javascript' src='layout/scripts/unitegallery.min.js'></script>
     <script type='text/javascript' src='layout/scripts/ug-theme-tiles.js'></script>
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
-
-
+    <script type="text/javascript" src="layout/scripts/smartstove.js"></script>
 
 </head>
 <body>
@@ -84,21 +82,18 @@
                         <img alt="Smart Stove Alert - Design 1"
                              src="images/SS1.JPG"
                              data-image="images/SS1.JPG"
-                             
                              style="display:none;">
                     </a>
                     <a class="aboutRightLinks">
                         <img alt="Smart Stove Alert - Design 2"
                              src="images/SS3.JPG"
                              data-image="images/SS3.JPG"
-                             
                              style="display:none">
                     </a>
                     <a class="aboutRightLinks">
                         <img alt="Smart Stove Alert - Design 3"
                              src="images/SS4.jpg"
                              data-image="images/SS4.jpg"
-                             
                              style="display:none">
                     </a>
 
@@ -143,21 +138,27 @@
                         <div class="checkOutLeft">
                             <span class="cartHeadingLabel">Customer Information</span>
                             <br />
-                            <label class="cartLabel">First Name</label>
-                            <input id="fname" class="cartText" type="text" placeholder="Enter First Name" />
-                            <label class="cartLabel">Last Name</label>
-                            <input id="lname" class="cartText" type="text" placeholder="Enter Last Name" />
-                            <br />
-                            <br />
-                            <label class="cartLabel">Email</label>
-                            <input id="email" class="cartEmail" type="email" placeholder="Enter Email Address" />
-                            <br />
-                            <br /><br />
-                            <br /><br />
-                            <br />
-                            <br />
-                            <br />
-                            <button id="checkout" class="cartButton">Next : Proceed Billing Information</button>
+                            <form id="checkOutForm">
+                                <label class="cartLabel">First Name</label>
+                                <input id="fname" class="cartText" type="text" placeholder="Enter First Name" name="fname"
+                                       pattern="/^[a-zA-Z ]{2,30}$/" required />
+                                <label class="cartLabel">Last Name</label>
+                                <input id="lname" class="cartText" type="text" placeholder="Enter Last Name" name="lname"
+                                       pattern="/^[a-zA-Z ]{2,30}$/" required />
+                                <br />
+                                <br />
+                                <label class="cartLabel">Email</label>
+                                <input id="email" class="cartEmail" type="email" placeholder="Enter Email Address" name="reply_to"
+                                       pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                                       required />
+                                <br />
+                                <br /><br />
+                                <br /><br />
+                                <br />
+                                <br />
+                                <br />
+                                <button id="checkout" class="cartButton">Next : Proceed Billing Information</button>
+                            </form>
                         </div>
                         <div class="checkOutRight">
                             <h3 style="color:#000; text-align:center; font-size:16px; font-weight:bold;">Order Summary</h3>
@@ -283,117 +284,9 @@
             </div>
         </footer>
 
-        <script type="text/javascript">
-
-
-            $(document).ready(function () {
-                $('#checkout').click(function () {
-                    var hidden = $('.hidden');
-
-                    //if (hidden.hasClass('visible')) {
-                    //    hidden.animate({ "left": "-1000px" }, 1).removeClass('visible');
-                    //} else {
-                    //    hidden.animate({ "left": "200px" }, "slow").addClass('visible');
-                    //    $('#checkoutcontent').hide();
-                    //    $('.modal-content').height(200);
-                    //}
-                });
-
-                $('#buynow').click(function () {
-                    $('#checkoutcontent').show();
-                    var hidden = $('.hidden');
-
-                    $('.modal-content').removeAttr("style");
-
-                    if (hidden.hasClass('visible')) {
-                        hidden.animate({ "left": "-1000px" }, 1).removeClass('visible');
-                    }
-                });
-
-                $("#gallery").unitegallery();
-            });
-            /****************************************************************************************************/
-
-            //jQuery(document).ready(function () {
-
-            //    jQuery("#gallery").unitegallery();
-
-            //});
-
-            /****************************************************************************************************/
-
-            // Get the modal
-            var modal = document.getElementById('myModal');
-
-            // Get the button that opens the modal
-            var btn = document.getElementById("buynow");
-
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
-
-            // When the user clicks the button, open the modal
-            btn.onclick = function () {
-
-                //modal.style.display = "block";
-                $("#myModal").delay(200).fadeIn();
-            }
-
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function () {
-                modal.style.display = "none";
-            }
-
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function (event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-
-
-
-                (function () {
-                    emailjs.init("user_XrzzeQbqALn19D64MH8O9");
-                })();
-
-            var myform = $("form#checkOutForm");
-
-            myform.submit(function (event) {
-                event.preventDefault();
-
-                var params = myform.serializeArray().reduce(function (obj, item) {
-                    obj[item.name] = item.value;
-                    return obj;
-                }, {});
-
-                // Change to your service ID, or keep using the default service
-                var service_id = "default_service";
-
-                var template_id = "smartstove";
-                myform.find("button").text("Processing...");
-                emailjs.send(service_id, template_id, params)
-                    .then(function () {
-                        //alert("Sent!");
-                        myform.find("button").text("Next : Proceed Billing Information");
-                        /***************************************************************************/
-                        var hidden = $('.hidden');
-
-                        if (hidden.hasClass('visible')) {
-                            hidden.animate({ "left": "-1000px" }, 1).removeClass('visible');
-                        } else {
-                            hidden.animate({ "left": "200px" }, "slow").addClass('visible');
-                            $('#checkoutcontent').hide();
-                            $('.modal-content').height(200);
-                        }
-                        /***************************************************************************/
-                    }, function (err) {
-                        alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
-                        myform.find("button").text("Next : Proceed Billing Information");
-                    });
-                return false;
-            });
-
-        </script>
+        
     </div>
+
+    <script type="text/javascript" src="layout/scripts/smartstove.js"></script>
 </body>
 </html>
