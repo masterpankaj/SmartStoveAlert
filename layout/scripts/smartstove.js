@@ -20,7 +20,7 @@ myform.submit(function (event) {
     emailjs.send(service_id, template_id, params)
         .then(function () {
             //alert("Sent!");
-            myform.find("button").text("Next : Proceed Billing Information");
+            myform.find("button").text("Submit Request");
             /***************************************************************************/
             var hidden = $('.hidden');
 
@@ -34,7 +34,7 @@ myform.submit(function (event) {
             /***************************************************************************/
         }, function (err) {
             alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
-            myform.find("button").text("Next : Proceed Billing Information");
+            myform.find("button").text("Submit Request");
         });
     return false;
 });
@@ -61,7 +61,7 @@ subscribeForm.submit(function (event) {
 
         }, function (err) {
             alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
-            subscribeForm.find("button").text("Next : Proceed Billing Information");
+            subscribeForm.find("button").text("Submit Request");
         });
     return false;
 });

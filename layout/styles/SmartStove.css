@@ -142,7 +142,7 @@ nav {
     margin-left: 1px;
     letter-spacing: 1px;
     font-size: 12px;
-    font-weight: 530;
+    font-weight: 500;
     text-transform: none;
     color: #f4511e;
 }
@@ -152,7 +152,7 @@ nav {
     background-color: #f4511e;
     background: linear-gradient(to bottom,#f4511e 0,#d84315 100%);
     color: #fff;
-    width: 90px;
+    width: 140px !important;
     text-align: center;
     padding-top: 6px;
     letter-spacing: normal;
